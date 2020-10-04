@@ -7,12 +7,32 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
 
     <title>Hello, world!</title>
   </head>
   <body>
-  
+    <div class="container">
+      <!-- Content here -->
+      <div class="jumbotron">
+        <h1 class="display-4">Schedule Planner</h1>
+        <p class="lead">This is a simple schedule planner application that can help you organize your day.</p>
+        <hr class="my-4">
+        <p>Please click the button below to open your schedule planner</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button" id="jBtn">Plan!</a>
+      </div>
+      <div class="planner">
+        <div class="time-display">
+        <h1 id="date"></h1> 
+        <h1 id="time"></h1>
+        <div id="planner-display"></div>
+        </div>
+      </div>
+    
 
+
+
+    </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
