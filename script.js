@@ -1,3 +1,5 @@
+$(document).ready(function() {
+
 $( "#jBtn" ).click(function() {
   $( ".jumbotron" ).hide( "drop", { direction: "down" }, "slow" );
 });
@@ -35,7 +37,7 @@ function displayPlanner(){
     newDiv.attr("class", "plan");
     newDiv.text(12+"am");
     $("#planner-display").append(newDiv);
-    $("#"+i).append("<input id=plan" +i+"></input><button id=btn"+i+">+</button>");
+    $("#"+i).append("<input id=plan" +i+" type=text></input><button id="+i+">+</button>");
     }
     else if(i<12){
     var newDiv = $("<div>");
@@ -43,7 +45,7 @@ function displayPlanner(){
     newDiv.attr("class", "plan");
     newDiv.text(i+"am");
     $("#planner-display").append(newDiv);
-    $("#"+i).append("<input id=plan" +i+"></input><button id=btn"+i+">+</button>");
+    $("#"+i).append("<input id=plan" +i+" type=text></input><button id="+i+">+</button>");
     }
     else if(i==12){
     var newDiv = $("<div>");
@@ -51,7 +53,7 @@ function displayPlanner(){
     newDiv.attr("class", "plan");
     newDiv.text(i+"PM");
     $("#planner-display").append(newDiv);
-    $("#"+i).append("<input id=plan" +i+"></input><button id=btn"+i+">+</button>");
+    $("#"+i).append("<input id=plan" +i+"></input><button id="+i+">+</button>");
     }
     else{
       var PM=i-12;
@@ -60,7 +62,7 @@ function displayPlanner(){
       newDiv.attr("class", "plan");
       newDiv.text(PM+"PM");
       $("#planner-display").append(newDiv);
-      $("#"+i).append("<input id=plan" +i+"></input><button id=btn"+i+">+</button>");
+      $("#"+i).append("<input id=plan" +i+"></input><button id="+i+">+</button>");
     }
     var hourCounter = new Date();
     if(i==hourCounter.getHours()){
@@ -80,3 +82,17 @@ function displayPlanner(){
 }
 
 displayPlanner();
+
+$("button").click(function() {
+
+var btnID = this.id;
+var userInput = document.getElementById("plan"+btnID);
+localStorage.setItem(this.id, userInput.value);
+});
+
+for(var i=0;i<=24;i++){
+  var storageInput = localStorage.getItem(i);
+  document.getElementById("plan"+i).value = storageInput;
+}
+
+});
