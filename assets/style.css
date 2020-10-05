@@ -1,0 +1,34 @@
+/* bootstrap sizing */
+.selector-for-some-widget {
+    box-sizing: content-box;
+  }
+  /* input box sizing */
+.userInput{
+    margin: auto;
+    width: 80%;
+}
+/* plan divs sizing */
+.plan{
+    margin: 10px;
+    padding: 10px;
+}
+
+/* time in plan div sizing */
+.plan h4{
+    font-size: x-large;
+}
+/* container for the entire planner */
+.planner {
+    background-color: #f8f9fa;
+    border-style: solid;
+    border-color: #007bff;
+    border-width: 3px;
+}
+/* time section */
+#time{
+    text-align: center;
+}
+/* date section */
+#date{
+    text-align: center;
+}
